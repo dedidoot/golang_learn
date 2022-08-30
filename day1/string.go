@@ -7,5 +7,5 @@ func main() {
 	fmt.Println("This is a String")
 
 	fmt.Println(len("Hello"))
-	fmt.Println("Hello"[2])
+	fmt.Println("Hello"[4])
 }

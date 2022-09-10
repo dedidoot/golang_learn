@@ -14,4 +14,7 @@ func getSum(number ...int) int {
 func main() {
 	test := getSum(10, 10, 10, 10)
 	println(test)
+
+	slice := []int{20, 20, 20, 20}
+	println(getSum(slice...))
 }

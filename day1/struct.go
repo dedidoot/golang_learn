@@ -4,7 +4,7 @@ import "fmt"
 
 type Blockchain struct {
 	Name, Currency, Date string
-	PriceToUsd           int64
+	PriceToUsd           float64
 }
 
 func main() {
@@ -15,5 +15,13 @@ func main() {
 	blockchain.Date = "2022-09-14, 11:20:37 PM"
 	blockchain.PriceToUsd = 1602.000000
 	fmt.Println(blockchain)
+
+	var btc = Blockchain{
+		Name:       "Bitcoin",
+		Currency:   "BTC",
+		Date:       "2022-09-14, 11:53:37 PM",
+		PriceToUsd: 20230.000000,
+	}
+	fmt.Println(btc)
 
 }

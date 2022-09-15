@@ -7,6 +7,14 @@ type Blockchain struct {
 	PriceToUsd           float64
 }
 
+func (blockchain Blockchain) getCrypto(name string) {
+	fmt.Println("Hello", name)
+}
+
+func (blockchain Blockchain) getFavoriteCrypto(name string) {
+	fmt.Println("My favorite crypto", name)
+}
+
 func main() {
 
 	var blockchain Blockchain
@@ -16,6 +24,8 @@ func main() {
 	blockchain.PriceToUsd = 1602.000000
 	fmt.Println(blockchain)
 
+	blockchain.getCrypto("Cardano")
+
 	var btc = Blockchain{
 		Name:       "Bitcoin",
 		Currency:   "BTC",
@@ -24,4 +34,5 @@ func main() {
 	}
 	fmt.Println(btc)
 
+	btc.getFavoriteCrypto("Ripple")
 }
